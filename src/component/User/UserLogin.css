@@ -1,0 +1,167 @@
+.login-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+  
+  .login-Image {
+    flex: 1;
+    max-width: 50%;
+  }
+  
+  .login-form {
+    flex: 1;
+    max-width: 50%;
+    border: 3px solid green;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+.login-container{
+    position: absolute;
+    background-color: rgb(117, 149, 117);
+    margin-left: 620px;
+    margin-top: 5px;
+    width: 700px;
+    height: 500px;
+    border-radius: 5px;
+}
+.login-form{
+    border: 3px solid green;
+    width: 400px;
+    margin-left: 0px;
+    height: 500px;
+    text-align: center;
+    background-color: rgb(133, 161, 133);
+}
+.LoginLogo{
+    margin-top: 5px;
+}
+label{
+    margin-right: 180px;
+    font-weight: 500;
+    font-size: 25px;
+}
+input{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+}
+.login-btn{
+    width: 300px;
+    height: 40px;
+    border: 3px solid rgb(26, 229, 8);
+    border-radius: 10px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.login-btn:hover {
+    background-color: #e7f0e9;
+}
+
+.login-Image{
+    width: 300px;
+    height: 300px;
+}
+
+.navbar{
+    /* background-color: rgb(13, 13, 13); */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+}
+
+h5{
+    margin-top: 35px;
+    font-size: 18px;
+}
+h5:hover{
+   color: rgb(104, 131, 147);
+   cursor: pointer;
+}
+.img1{
+    width: 90px;
+    margin-top: -30px;
+    height: 100px;
+}
+.img2{
+    width: 100%;
+    height: 600px;
+}
+
+@media (max-width: 1000px){
+   .navbar{
+     background-color: rgb(100, 83, 151);
+     margin-top: -200px;
+   }
+}
+.mainNavbar{
+   position: absolute;
+   margin-top: 10px;
+   margin-left: 20px;
+}
+
+@media (max-width: 1000px){
+    .mainNavbar{
+        margin-top: 100px;
+    }
+}
+@media (min-width: 1000px){
+    .mainNavbar{
+        margin-top: -200px;
+    }
+}
+
+.menuIcon{
+    cursor: pointer;
+}
+
+.RowWise{
+        position: absolute;
+        height: 600px;
+        width: 250px;
+        margin-top: -40px;
+        margin-left: 10px;
+} 
+.backIcon{
+    cursor: pointer;
+    margin-top: -90px;
+    margin-left: 90px;
+}
+
+.loginPage{
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 800px;
+    background-color: red;
+}
+
+@media (max-width: 1000px) {
+    .loginPage{
+        position:relative;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        margin-left: 300px;
+        margin-top: 75px;
+        background-color: rgb(65, 153, 212);
+    }
+    .loginLogo{
+        margin-top: 20px;
+        height: 100px;
+    }
+}
+.login-Image{
+    height: 500px;
+    width: 400px;
+}
+.cancleBtn{
+    margin-left: 670px;
+    cursor: pointer;
+    color: rgb(4, 4, 4);
+}
+

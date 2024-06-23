@@ -1,0 +1,73 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 60px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+  min-width: 250px;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.footer-section p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  color: white;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.social-icon span {
+  margin-left: 10px;
+}
+
+.social-icon:hover {
+  color: #ddd;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
