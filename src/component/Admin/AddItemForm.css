@@ -1,0 +1,83 @@
+.add-item-form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+  }
+  
+  .add-item-form-image {
+    flex: 1;
+    text-align: center;
+     border-radius: 40px;
+  }
+  
+  .add-item-form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .add-item-form-container {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+  }
+  
+  .add-item-form-title {
+    margin-bottom: 20px;
+  }
+  
+  .add-item-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .add-item-form-group {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .add-item-form-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .add-item-form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .add-item-form-price-input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .add-item-form-currency-symbol {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .add-item-form-button {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-item-form-button:hover {
+    background-color: #0056b3;
+  }
+  
