@@ -1,8 +1,7 @@
 import React, { useRef } from 'react'
 import '../User/UserRagister.css'
-import CancelIcon from '@mui/icons-material/Cancel';
 import { storeAction } from '../../store/storeSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import ClearIcon from '@mui/icons-material/Clear';
 import { toast } from 'react-toastify';
@@ -69,9 +68,10 @@ const AdminRagister = () => {
         <div className="login-container">
         <span className='RegisterCancleBtn' onClick={CancelHandler}><ClearIcon fontSize='large'/></span>
   <div className="login-content">
-    <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)"/>
+    <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)" alt='register-pic'/>
     <form className="login-form">
-      <img className='LoginLogo' src='https://www.paperboatfoods.com/cdn/shop/files/MicrosoftTeams-image_7_150x.png?v=1699348334'/>
+      <img className='LoginLogo' src='https://www.paperboatfoods.com/cdn/shop/files/MicrosoftTeams-image_7_150x.png?v=1699348334' alt='logo'/>
+
       <h4>Admin Ragister</h4><br/>
       <div className="form-group">
         <label className='RegisterName'><b>Name</b></label><br/>

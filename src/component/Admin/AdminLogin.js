@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import "../Admin/AdminLogin.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { storeAction } from '../../store/storeSlice';
@@ -65,9 +65,9 @@ const AdminLogin = () => {
         {ShowAdminLogin ? <div className="login-container">
         <span className='LoginCancleBtn' onClick={CancelHandler}><ClearIcon fontSize='large'/></span>
   <div className="login-content">
-    <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)"/>
+    <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)" alt='login-pic'/>
     <form className="login-form" action="/login" method="post">
-      <img className='LoginLogo' src='https://www.paperboatfoods.com/cdn/shop/files/MicrosoftTeams-image_7_150x.png?v=1699348334'/>
+      <img className='LoginLogo' src='https://www.paperboatfoods.com/cdn/shop/files/MicrosoftTeams-image_7_150x.png?v=1699348334' alt='logo'/>
       <h2>Admin Login</h2><br/>
       <div className="form-group">
         <label className='login-label-name'><b>Username</b></label><br/>

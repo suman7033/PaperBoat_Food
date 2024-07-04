@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import "../Admin/AddItemForm.css"
 import { toast } from 'react-toastify';
 
@@ -8,8 +8,6 @@ const AddItemForm = () => {
   const ItemImageUrlRef=useRef();
   const PriceRef=useRef();
   const OfferRef=useRef();
-
-  const [itemData,setItemData]=useState([]);
 
   const AddItemHandler=async(e)=>{
     e.preventDefault();
@@ -27,7 +25,7 @@ const AddItemForm = () => {
             'Content-Type': 'application/json'
           }
          });
-         const ItemData=await response.json();
+         //const ItemData=await response.json();
          
          if(!response.ok){
           throw new Error("Data Not Post");
@@ -47,7 +45,6 @@ const AddItemForm = () => {
         });
        }
   }
-  console.log("Item",itemData);
   return (
     <div className="add-item-form-wrapper">
       <div className="add-item-form-image">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
@@ -52,7 +52,8 @@ const Navbar = () => {
             <Link to='/login'>
               {isLogin ? <NotificationsActiveIcon className='personIcon' fontSize='large'/>:<PersonIcon className="personIcon" onClick={Admin_user_Handler} fontSize='large' />}
             </Link>
-            <Link className='cart' to='/cart'><ShoppingCartIcon fontSize='large' /></Link><b className='CartLength'>{isLogin ? AddCart: "0"}</b>
+            <Link className='cart' to='/cart'><ShoppingCartIcon fontSize='large' /></Link>
+            <b className='CartLength'>{isLogin ? AddCart: "0"}</b>
             <Link className='PersonOffIcon'><PersonOffIcon onClick={PersonOffIconHandler} fontSize='large'/></Link>
           </div>
       </div>

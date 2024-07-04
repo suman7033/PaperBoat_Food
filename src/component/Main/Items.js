@@ -10,7 +10,6 @@ const Items = () => {
   const [addItemTrigger, setAddItemTrigger] = useState(0); // State variable to trigger useEffect
   const dispatch = useDispatch();
   const email = useSelector((state) => state.storeVal.email);
-  const AddItems = useSelector((state) => state.storeVal.AddItems);
 
   useEffect(() => {
     const fetchItems = async () => {
@@ -52,7 +51,7 @@ const Items = () => {
 
     fetchItems();
     fetchAddItems();
-  }, [addItemTrigger]); // Add addItemTrigger as a dependency
+  }, [addItemTrigger]);
 
   const handleAddToCart = async (item) => {
     const userSpecificPath = email.replace('.', '_');
@@ -64,7 +63,7 @@ const Items = () => {
           'Content-Type': 'application/json',
         },
       });
-      const addData = await response.json();
+      //const addData = await response.json();
       toast.success('Item added to cart', {
         position: 'top-center',
         autoClose: 3000,

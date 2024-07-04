@@ -17,6 +17,7 @@
     position: absolute;
     background-color: rgb(117, 149, 117);
     margin-left: 620px;
+    /* 620 */
     margin-top: 10px;
     width: 700px;
     height: 500px;
@@ -64,4 +65,13 @@ input{
 }
 .login-btn:hover {
     background-color: #e7f0e9;
+}
+
+@media (max-width: 400x) {
+    .login-container{
+        width: 100%;
+    }
+    .login-content{
+        width: 100%;
+    }
 }
