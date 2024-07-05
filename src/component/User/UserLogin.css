@@ -13,16 +13,25 @@
   a{
     cursor: pointer;
   }
-.login-container{
+/* .login-container{
     position: absolute;
     background-color: rgb(117, 149, 117);
     margin-left: 620px;
-    /* 620 */
     margin-top: 10px;
     width: 700px;
     height: 500px;
     border-radius: 5px;
-}
+} */
+ .login-container{
+    /* position: relative; */
+    margin-left: 600px;
+    display: flex;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+ }
 .login-form{
     /* border: 3px solid green; */
     width: 400px;
@@ -35,6 +44,7 @@
     background-color: rgb(133, 161, 133);
 }
 .LoginCancleBtn{
+    position: absolute;
     margin-left: 660px;
     cursor: pointer;
 }
@@ -65,13 +75,4 @@ input{
 }
 .login-btn:hover {
     background-color: #e7f0e9;
-}
-
-@media (max-width: 400x) {
-    .login-container{
-        width: 100%;
-    }
-    .login-content{
-        width: 100%;
-    }
 }

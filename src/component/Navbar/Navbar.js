@@ -14,6 +14,7 @@ import Admin_user from './Admin_user';
 import AdminLogin from '../Admin/AdminLogin';
 import UserLogin from '../User/UserLogin';
 import AdminRagister from '../Admin/AdminRagister';
+//import AddItemForm from '../Main/AddItemForm';
  
 const Navbar = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const Navbar = () => {
   const ShowUserLogin=useSelector((state)=>state.storeVal.ShowUserLogin)
   const ShowAdminRagister=useSelector((state)=>state.storeVal.ShowAdminRagister);
   const AddCart=useSelector((state)=>state.storeVal.AddCart);
+  // const ShowAddForm=useSelector((state)=>state.storeVal.ShowAddForm);
 
   const Admin_user_Handler = () => {
     dispatch(storeAction.ShowAdmin_and_User());
@@ -63,6 +65,7 @@ const Navbar = () => {
        {ShowAdminLogin ? <AdminLogin/>: null}
        {ShowAdminRagister ? <AdminRagister/>: null}
        {ShowUserLogin ? <UserLogin/> : null}
+       {/* {ShowAddForm ? <AddItemForm/>:null} */}
        </div>
     </>
   );

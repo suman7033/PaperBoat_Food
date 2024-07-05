@@ -68,7 +68,7 @@ const UserLogin = () => {
   return (
     <div>
       {ShowUserLogin ? <div className="login-container">
-        <span className='LoginCancleBtn' onClick={CancelHandler}><ClearIcon fontSize='large' /></span>
+        <div className='LoginCancleBtn' onClick={CancelHandler}><ClearIcon fontSize='large' /></div>
         <div className="login-content">
           <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)" />
           <form className="login-form" action="/login" method="post">

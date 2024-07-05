@@ -60,6 +60,7 @@ const UserRagister = () => {
   }
   const ShowUserLogin=()=>{
     dispatch(storeAction.ShowUserLogin())
+    dispatch(storeAction.CancelUserRagister())
   }
   
   const CancelHandler=()=>{

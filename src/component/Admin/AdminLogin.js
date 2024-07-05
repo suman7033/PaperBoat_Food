@@ -43,6 +43,11 @@ const AdminLogin = () => {
           position: 'top-center',
           autoClose: 3000,
         });
+        if (data.idToken) {
+          localStorage.setItem("email", data.email);
+          localStorage.setItem('authToken', data.idToken);
+          dispatch(storeAction.UserLogin({ email: data.email, authToken: data.idToken }));
+        }
          dispatch(storeAction.CancelAdminLogin())
          dispatch(storeAction.NotShowAdmin_and_User());
          dispatch(storeAction.ShowAddForm());

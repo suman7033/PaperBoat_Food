@@ -43,10 +43,15 @@ const AdminRagister = () => {
           autoClose: 3000,
         });
         navigate("/");
+        if (data.idToken) {
+          localStorage.setItem("email", data.email);
+          localStorage.setItem('authToken', data.idToken);
+          dispatch(storeAction.UserLogin({ email: data.email, authToken: data.idToken }));
+        }
         dispatch(storeAction.NotShowAdmin_and_User());
-        dispatch(storeAction.ShowUserRagister());
-        dispatch(storeAction.CancelUserLogin());
-        dispatch(storeAction.CancelUserRagister());
+        dispatch(storeAction.CancelAdminLogin());
+        dispatch(storeAction.CancelAdminRagister());
+        dispatch(storeAction.ShowAddForm());
         
       }catch(error){
         toast.error(`Error: ${error.message}`, {

@@ -71,6 +71,9 @@ const storeSlice=createSlice({
         ShowAddForm(state,action){
             state.ShowAddForm=true;
         },
+        NotShowAddForm(state,action){
+           state.ShowAddForm=false;
+        },
         ShowItems(state,action){
             state.ShowItems=true;
         },

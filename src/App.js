@@ -15,7 +15,7 @@ import Search from './component/Navbar/Search';
 import ShoppingCart from './component/Navbar/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import Admin_user from './component/Navbar/Admin_user';
-import AddForm from './component/Admin/AddItemForm';
+import AddForm from './component/Main/AddItemForm';
 import Items from './component/Main/Items';
 import { storeAction } from './store/storeSlice';
 
