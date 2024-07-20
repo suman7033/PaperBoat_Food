@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import "../Navbar/gift.css"
+import { useDispatch } from 'react-redux'
+import { storeAction } from '../../store/storeSlice';
 
 
 const IndianKitchen = () => {
+  const dispatch=useDispatch();
+  useEffect(()=>{
+    dispatch(storeAction.ShowPic());
+ },[])
   return (
     <div>
        <div>
-        <img className="gifts-image" src='https://5.imimg.com/data5/ANDROID/Default/2021/1/JL/TG/SQ/113782051/product-jpeg-500x500.jpg'/>  
+        <img className="gifts-image" src='https://media.designcafe.com/wp-content/uploads/2020/06/23130933/traditional-indian-kitchen-design.jpg'/>  
       </div>
     </div>
   )

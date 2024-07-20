@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../Navbar/gift.css"
+import { useDispatch } from 'react-redux'
+import { storeAction } from '../../store/storeSlice';
 
 const Nuts = () => {
+  const dispatch=useDispatch();
+  useEffect(()=>{
+     dispatch(storeAction.ShowPic());
+  },[])
   return (
     <div>
       <div>

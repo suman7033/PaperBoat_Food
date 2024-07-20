@@ -1,78 +1,127 @@
-.login-content {
+/* Container to center the content */
+.login-container {
     display: flex;
-    height: 100%;
+    justify-content: center;
     align-items: center;
-  }
-  
-  .login-Image {
-    margin-bottom: 50px;
-    width: 300px;
-    height: 465px;
-    border-radius: 10px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(117, 149, 117);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
   }
   a{
     cursor: pointer;
   }
-/* .login-container{
-    position: absolute;
-    background-color: rgb(117, 149, 117);
-    margin-left: 620px;
-    margin-top: 10px;
-    width: 700px;
-    height: 500px;
-    border-radius: 5px;
-} */
- .login-container{
-    /* position: relative; */
-    margin-left: 600px;
+  
+  /* Login content wrapper */
+  .login-content {
     display: flex;
-    border-radius: 5px;
-    width: 200px;
-    margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
- }
-.login-form{
-    /* border: 3px solid green; */
-    width: 400px;
-    margin-left: 1px;
-    height: 460px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 0px;
-    margin-bottom: 50px;
-    text-align: center;
-    background-color: rgb(133, 161, 133);
-}
-.LoginCancleBtn{
+    width: 750px;
+    margin-top: -150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login image styling */
+  .login-Image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  /* Clear icon styling */
+  .LoginCancleBtn {
     position: absolute;
-    margin-left: 660px;
+    top: 10px;
+    right: 10px;
     cursor: pointer;
-}
-.LoginLogo{
-    margin-top: 0px;
+  }
+   
+  
+  
+  
+  /* Login form styling */
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .LoginLogo {
     width: 50px;
     height: 50px;
-}
-.login-label-name{
-    margin-right: 245px;
-    font-weight: 200;
-}
-.login-label-password{
-    margin-right: 245px;
-}
-input{
     margin-bottom: 20px;
+  }
+  
+  .login-label-name,
+  .login-label-password {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 200;
+  }
+  
+  input {
+    width: 100%;
     padding: 10px;
-    width: 300px;
-}
-.login-btn{
-    width: 300px;
-    height: 40px;
-    border: 3px solid rgb(26, 229, 8);
-    border-radius: 10px;
-    font-size: 23px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(26, 229, 8);
     cursor: pointer;
-}
-.login-btn:hover {
+  }
+  
+  .login-btn:hover {
     background-color: #e7f0e9;
-}
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .login-content {
+      flex-direction: column;
+    }
+  
+    .login-Image {
+      /* margin: 0 0 20px 0;
+      width: 100%;
+      max-width: 300px; */
+      display: none;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .login-container {
+      padding: 10px;
+    }
+  
+    .login-Image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .login-form {
+      max-width: 100%;
+    }
+    .login-content{
+        width: 390px;
+        margin-top: -130px;
+    }
+  }
+  

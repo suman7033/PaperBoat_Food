@@ -66,27 +66,29 @@ const UserLogin = () => {
   }
 
   return (
-    <div>
-      {ShowUserLogin ? <div className="login-container">
-        <div className='LoginCancleBtn' onClick={CancelHandler}><ClearIcon fontSize='large' /></div>
-        <div className="login-content">
-          <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)" />
-          <form className="login-form" action="/login" method="post">
-            <img className='LoginLogo' src='https://www.paperboatfoods.com/cdn/shop/files/MicrosoftTeams-image_7_150x.png?v=1699348334' />
-            <h2>User Login</h2><br />
-            <div className="form-group">
-              <label className='login-label-name'><b>Username</b></label><br />
-              <input type="text" ref={usernameRef} placeholder="username.." required />
-            </div>
-            <div className="form-group">
-              <label className='login-label-password'><b>Password</b></label><br />
-              <input type="password" ref={passwordRef} placeholder="password.." required />
-            </div>
-            <button type="submit" className="login-btn" onClick={LoginHandler}><b>Login</b></button><br /><br />
-            <p>Don't have an account? &nbsp; <a onClick={RagisterFormOpen}>Sign_up</a></p>
-          </form>
-        </div>
-      </div> : null}
+    <div className="login-container">
+      {ShowUserLogin && (
+        <>
+          <div className='LoginCancleBtn' onClick={CancelHandler}><ClearIcon fontSize='large' /></div>
+          <div className="login-content">
+            <img className="login-Image" src="https://www.jiomart.com/images/product/original/rvlszfsuqv/paper-boat-premium-smoked-and-roasted-nuts-with-himalayan-pink-salt-1kg-product-images-orvlszfsuqv-p594397657-6-202210110831.jpg?im=Resize=(1000,1000)" alt="Login" />
+            <form className="login-form" onSubmit={LoginHandler}>
+              <img className='LoginLogo' src='https://www.paperboatfoods.com/cdn/shop/files/MicrosoftTeams-image_7_150x.png?v=1699348334' alt="Logo" />
+              <h2>User Login</h2>
+              <div className="form-group">
+                <label className='login-label-name'><b>Username</b></label>
+                <input type="text" ref={usernameRef} placeholder="Username.." required />
+              </div>
+              <div className="form-group">
+                <label className='login-label-password'><b>Password</b></label>
+                <input type="password" ref={passwordRef} placeholder="Password.." required />
+              </div>
+              <button type="submit" className="login-btn"><b>Login</b></button>
+              <p>Don't have an account? <a onClick={RagisterFormOpen}>Sign_up</a></p>
+            </form>
+          </div>
+        </>
+      )}
     </div>
   )
 }

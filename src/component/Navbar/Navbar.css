@@ -29,10 +29,14 @@
     color: white;
 }
 .CartLength{
-    position: absolute;
-    margin-left: 1010px;
-    margin-top: 14px;
-    color: lightgreen;
+    /* position: absolute;
+    /* margin-left: 1010px; */
+    /* margin-top: 14px;
+    color: aqua;
+    width: 100%; */
+}
+ .CartLength{
+    color: aqua;
 }
 .gifts-galore{
     text-decoration: none;
@@ -60,4 +64,6 @@
 .cart{
     margin-top: 28px;
     color: white;
+    width: 10%;
+
 }

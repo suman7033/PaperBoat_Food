@@ -1,42 +1,123 @@
-.RegisterCancleBtn{
-    margin-left: 665px;
+/* Container to center the content */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(117, 149, 117);
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  a {
     cursor: pointer;
-}
-.RegisterName{
-    margin-right: 270px;
-}
-.RegisterUserName{
-   margin-right: 243px;
-}
-
-.RegisterUserPassword{
-    margin-right: 245px;
-}
-.RegisterBtn{
-
-}
-.RegisterBtn {
-    width: 100%; /* Full width */
-    max-width: 300px; /* Restricts maximum width */
-    height: 40px; /* Fixed height */
-    border: none; /* Removes border */
-    border-radius: 20px; /* Rounded corners */
-    font-size: 18px; /* Adjusts font size */
-    cursor: pointer; /* Changes cursor on hover */
-    background-color: rgb(26, 229, 8); /* Button color */
-    color: white; /* Text color */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth color and transform transition */
-}
-
-/* Hover effect for the submit button */
-.RegisterBtn:hover {
-    background-color: #1cd306; /* Lighter shade on hover */
-    transform: translateY(-2px); /* Slightly raises button on hover */
-}
-
-/* Active effect for the submit button */
-.RegisterBtn:active {
-    background-color: #17b805; /* Darker shade on active */
-    transform: translateY(0); /* Neutralizes the hover effect */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds an inset shadow */
-}
+  }
+  
+  /* Login content wrapper */
+  .login-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 750px;
+    margin-top: -150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login image styling */
+  .login-Image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  /* Clear icon styling */
+  .LoginCancleBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Login form styling */
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .LoginLogo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .login-label-name,
+  .login-label-password {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 200;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(26, 229, 8);
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    background-color: #e7f0e9;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .login-content {
+      flex-direction: column;
+    }
+  
+    .login-Image {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .login-container {
+      padding: 10px;
+    }
+  
+    .login-Image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .login-form {
+      max-width: 100%;
+    }
+  
+    .login-content {
+      width: 390px;
+      margin-top: -130px;
+    }
+  }
+  

@@ -13,7 +13,8 @@ const initialStore={
     ShowAddForm: false,
     ShowItems: false,
     email:"",
-    authToken: ""
+    authToken: "",
+    ShowPic: false
 }
 
 const storeSlice=createSlice({
@@ -82,8 +83,13 @@ const storeSlice=createSlice({
         },
         AddCart(state,action){
             state.AddCart=action.payload;
+        },
+        ShowPic(state,action){ 
+            state.ShowPic=true;
+        },
+        NotShowPic(state,action){
+            state.ShowPic=false;
         }
-
     }
 })
 

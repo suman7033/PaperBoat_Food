@@ -22,6 +22,8 @@ import { storeAction } from './store/storeSlice';
 const App = () => {
   const isLogin = useSelector((state) => state.storeVal.isLogin);
   const ShowAddForm = useSelector((state) => state.storeVal.ShowAddForm);
+  const ShowPic=useSelector((state)=>state.storeVal.ShowPic);
+
   const dispatch = useDispatch();
 
   const fetchLogin = () => {
@@ -57,7 +59,9 @@ const App = () => {
           <Route path='*' element={<Navigate to='/' />} />
         </Routes>
       </BrowserRouter>
-      {ShowAddForm ? <AddForm /> : <img className='img2' src='https://www.paperboatfoods.com/cdn/shop/files/DRY_FRUITS_AND_NUTS_BASED_SNACKS_1500x.jpg?v=1705656388' alt='Banner' />}
+      {/* {ShowAddForm ? <AddForm /> : <img className='img2' src='https://www.paperboatfoods.com/cdn/shop/files/DRY_FRUITS_AND_NUTS_BASED_SNACKS_1500x.jpg?v=1705656388' alt='Banner' />} */}
+      {ShowAddForm ? <AddForm /> : null}
+      {ShowPic ? null : <img className='img2' src='https://www.paperboatfoods.com/cdn/shop/files/DRY_FRUITS_AND_NUTS_BASED_SNACKS_1500x.jpg?v=1705656388' alt='Banner' />}
       <h1 className='heading'>New Pinch!</h1>
       <div>
         {isLogin ? <Items /> : null}
