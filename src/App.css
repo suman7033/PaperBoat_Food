@@ -3,6 +3,7 @@
     justify-content: space-evenly;
     margin-top: 10px;
     width: 100%;
+    font-size: 2.3vw;
 }
 
 .img4{
@@ -22,4 +23,11 @@
 .imgDiv{
     width: 100%;
     margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+   .img2{
+    display: none;
+    width: 100%;
+   }
+    
 }

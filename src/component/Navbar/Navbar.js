@@ -25,18 +25,17 @@ const Navbar = () => {
   const ShowUserLogin=useSelector((state)=>state.storeVal.ShowUserLogin)
   const ShowAdminRagister=useSelector((state)=>state.storeVal.ShowAdminRagister);
   const AddCart=useSelector((state)=>state.storeVal.AddCart);
-  // const ShowAddForm=useSelector((state)=>state.storeVal.ShowAddForm);
 
   const Admin_user_Handler = () => {
     dispatch(storeAction.ShowAdmin_and_User());
   };
   const PersonOffIconHandler=()=>{
      dispatch(storeAction.UserLogout())
+     dispatch(storeAction.NotShowPic());
   }
   console.log("Show",ShowUserRegisterForm);
   return (
     <>
-      <div>
           <div className='navbar'>
             <h5>
               <img
@@ -45,20 +44,20 @@ const Navbar = () => {
                 alt='Logo'
               />
             </h5>
-            <Link className='home'to='/'><HomeIcon fontSize='large' /></Link>
+            <div className='navDiv'>
+            <Link className='home'to='/'><HomeIcon fontSize='15vw' /></Link>
             <Link className='nuts-seeds-berries' to='/nuts-seeds-berries'>Nuts, Seeds & Berries</Link>
             <Link className='gifts-galore' to='/gifts-galore'>Gifts Galore</Link>
-            <Link className='indian-kitchen' to='/indian-kitchen'>Indian Kitchen</Link>
             <Link className='nuts-about-deals' to='/nuts-about-deals'>Nuts about Deals</Link>
-            <Link className='search' to='/search'><ManageSearchIcon fontSize='large' /></Link>
+            <Link className='search' to='/search'><ManageSearchIcon fontSize='15vw' /></Link>
             <Link to='/login'>
-              {isLogin ? <NotificationsActiveIcon className='personIcon' fontSize='large'/>:<PersonIcon className="personIcon" onClick={Admin_user_Handler} fontSize='large' />}
+              {isLogin ? <NotificationsActiveIcon className='personIcon' fontSize='15vw'/>:<PersonIcon className="personIcon" onClick={Admin_user_Handler} fontSize='15vw' />}
             </Link>
-            <Link className='cart' to='/cart'><ShoppingCartIcon fontSize='large' /> <b className='CartLength'>{isLogin ? AddCart: null}</b> </Link>
+            <Link className='cart' to='/cart'><ShoppingCartIcon fontSize='15vw' /> <b className='CartLength'>{isLogin ? AddCart: null}</b> </Link>
             {/* <b className='CartLength'>{isLogin ? AddCart: "0"}</b> */}
-            <Link className='PersonOffIcon'><PersonOffIcon onClick={PersonOffIconHandler} fontSize='large'/></Link>
+            <Link className='PersonOffIcon'><PersonOffIcon onClick={PersonOffIconHandler} fontSize='15vw'/></Link>
           </div>
-      </div>
+          </div>
       <div>
        {ShowAdmin_and_User ? <Admin_user/>: null}   
        {ShowUserRegisterForm ? <UserRegister/>: null}

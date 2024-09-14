@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Home from './component/Navbar/Home';
 import Nuts from './component/Navbar/Nuts';
 import Gifts from './component/Navbar/Gifts';
-import IndianKitchen from './component/Navbar/IndianKitchen';
 import NutsAbout from './component/Navbar/NutsAbout';
 import Search from './component/Navbar/Search';
 import ShoppingCart from './component/Navbar/ShoppingCart';
@@ -51,7 +50,6 @@ const App = () => {
           <Route path='/' element={isLogin ? <Home /> : <Navigate to='/login' />} />
           <Route path='/nuts-seeds-berries' element={isLogin ? <Nuts /> : <Navigate to='/login' />} />
           <Route path="/gifts-galore" element={isLogin ? <Gifts /> : <Navigate to='/login' />} />
-          <Route path="/indian-kitchen" element={isLogin ? <IndianKitchen /> : <Navigate to='/login' />} />
           <Route path="/nuts-about-deals" element={isLogin ? <NutsAbout /> : <Navigate to='/login' />} />
           <Route path='/Search' element={isLogin ? <Search /> : <Navigate to='/login' />} />
           <Route path='/cart' element={isLogin ? <ShoppingCart /> : <Navigate to='/login' />} />

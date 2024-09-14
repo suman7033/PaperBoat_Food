@@ -11,7 +11,7 @@ const Nuts = () => {
   return (
     <div>
       <div>
-        <img className="gifts-image" src='https://www.shutterstock.com/image-photo/falling-muesli-oat-granola-isolated-600nw-2373225801.jpg'/>  
+        <img className="gifts-image" src='https://media.istockphoto.com/id/695071562/photo/nuts-assortment-on-rustic-wood-table.jpg?s=612x612&w=0&k=20&c=G1ndYym-HLo9FCKnA2kh9qq4_2Lz_fYJH6QPZmpPw_Q='/>  
       </div>
     </div>
   )

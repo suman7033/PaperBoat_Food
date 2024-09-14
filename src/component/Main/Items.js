@@ -4,7 +4,6 @@ import { storeAction } from '../../store/storeSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
-
 const Items = () => {
   const [items, setItems] = useState([]);
   const [addItemTrigger, setAddItemTrigger] = useState(0); // State variable to trigger useEffect
@@ -14,7 +13,7 @@ const Items = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('https://paperboat-b7055-default-rtdb.firebaseio.com/.json'); // Replace with your API endpoint
+        const response = await fetch('https://paperboat-b7055-default-rtdb.firebaseio.com/.json'); // Corrected API endpoint
         const data = await response.json();
         console.log('fetchReal_Data', data);
         const transformedData = Object.values(data);
@@ -33,7 +32,7 @@ const Items = () => {
       try {
         const response = await fetch(`https://paperboat-b7055-default-rtdb.firebaseio.com/${userSpecificPath}.json`);
         const data = await response.json();
-        console.log('fetchAdd_Data', data);
+        console.log('UserSpecific_fetchAdd_Data', data);
 
         // Store the keys along with the items
         const transformedData = data ? Object.keys(data).map(key => ({ id: key, ...data[key] })) : [];
@@ -63,7 +62,7 @@ const Items = () => {
           'Content-Type': 'application/json',
         },
       });
-      //const addData = await response.json();
+      // const addData = await response.json();
       toast.success('Item added to cart', {
         position: 'top-center',
         autoClose: 3000,
