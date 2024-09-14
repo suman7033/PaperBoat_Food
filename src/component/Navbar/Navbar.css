@@ -3,7 +3,7 @@
     justify-content: space-evenly;
     height: 100px;
     width: 100%;
-    background-color: rgb(240, 16, 16);
+    background-color: rgb(94, 92, 92);
 }
 .navbar:hover{
     background-color: rgb(129, 191, 212);
@@ -19,31 +19,29 @@
 .cart, .PersonOffIcon, .search, .nuts-about-deals, .gifts-galore, .nuts-seeds-berries, .home, .personIcon{
     text-decoration: none;
     margin-top: 30px;
+    margin-left: 3vw;
     color: rgb(11, 243, 65);
     font-size: 2vw;
 }
 @media screen and (max-width: 760px){
     .navbar{
-        /* justify-content: space-evenly;
-        height: 400px; */
-        /* display: inline-block;
-        background-color: gray;
-        flex-direction: column; */
         flex-direction: column;
         align-items: center;
         height: auto;
     }
     .navbar:hover{
-        background-color: rgb(12, 243, 16);
+        background-color: rgb(145, 218, 146);
     }
     .navDiv{
         display: flex;
         flex-direction: column;
-        /* align-items: center; */
         width: 100%;
-        background-color: #4ef706;
+        background-color: #8ee8de;
         margin-top: -50px;
         border-right: 10px coral;
+    }
+    .navDiv:hover{
+        background-color: #4a4747;
     }
     .cart, .PersonOffIcon, .search, .nuts-about-deals, .gifts-galore, .nuts-seeds-berries, .home, .personIcon{
         text-decoration: none;
