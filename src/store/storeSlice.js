@@ -14,7 +14,8 @@ const initialStore={
     ShowItems: false,
     email:"",
     authToken: "",
-    ShowPic: false
+    ShowPic: false,
+    ShowFounder: true,
 }
 
 const storeSlice=createSlice({
@@ -89,6 +90,9 @@ const storeSlice=createSlice({
         },
         NotShowPic(state,action){
             state.ShowPic=false;
+        },
+        ShowFounder(state,action){
+            state.ShowFounder=false;
         }
     }
 })
