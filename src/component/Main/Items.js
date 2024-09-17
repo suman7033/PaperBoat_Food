@@ -82,8 +82,9 @@ const Items = () => {
     <div className="items-container">
       {items.map((item, index) => (
         <div key={index} className="item-card">
-          <img src={item.ItemImageUrl} alt={item.ItemName} className="item-image" />
           <h3 className="item-title">{item.ItemName}</h3>
+          <img src={item.ItemImageUrl} alt={item.ItemName} className="item-image" />
+          {/* <h3 className="item-title">{item.ItemName}</h3> */}
           <p className="item-price">${item.Price}</p>
           <p className="item-offer">-{item.Offer}% off</p>
           <button className="add-to-cart-btn" onClick={() => handleAddToCart(item)}>Add to Cart</button>
