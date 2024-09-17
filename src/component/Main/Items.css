@@ -1,9 +1,9 @@
 .items-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 20px;
-    gap: 20px;
+    gap: 10px;
   }
   
   .item-card {
@@ -57,4 +57,9 @@
   .add-to-cart-btn:hover {
     background-color: #218838;
   }
-  
+
+@media screen and (max-width: 760px) {
+   .items-container{
+    
+   }
+}

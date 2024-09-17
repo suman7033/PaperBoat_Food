@@ -22,52 +22,6 @@ const Items = () => {
     const url="https://razorpay.com/payment-link/plink_Oxl1InB9o0mrbM";
     window.open(url);
   }
-    //add regopay
-    // const loadRazorpayScript = () => {
-    //   return new Promise((resolve) => {
-    //     const script = document.createElement("script");
-    //     script.src = "https://checkout.razorpay.com/v1/checkout.js";
-    //     script.onload = () => resolve(true);
-    //     script.onerror = () => resolve(false);
-    //     document.body.appendChild(script);
-    //   });
-    // };
-  
-    // // Function to handle payment
-    // const BuyHandler = async () => {
-    //   toast.success("Don't Back and refresh", {
-    //         position: 'top-center',
-    //         autoClose: 3000,
-    //     });
-    //   const scriptLoaded = await loadRazorpayScript();
-  
-    //   if (!scriptLoaded) {
-    //     alert("Razorpay SDK failed to load. Are you online?");
-    //     return;
-    //   }
-  
-    //   const options = {
-    //     key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay key
-    //     amount: "50000", // Amount in paise (50000 paise = 500 INR)
-    //     currency: "INR",
-    //     name: "Your Company Name",
-    //     description: "Test Transaction",
-    //     handler: (response) => {
-    //       alert(`Payment Successful! Payment ID: ${response.razorpay_payment_id}`);
-    //     },
-    //     prefill: {
-    //       name: "Your Name",
-    //       email: "your-email@example.com",
-    //     },
-    //     theme: {
-    //       color: "#3399cc",
-    //     },
-    //   };
-  
-    //   const paymentObject = new window.Razorpay(options);
-    //   paymentObject.open();
-    // }
-    //add regopay
 
   const ShopingRemoveBtn = async (itemId) => {
     console.log("before Delete", itemId);
@@ -99,7 +53,7 @@ const Items = () => {
       ) : (
         items.map((item, index) => (
           <div key={index} className="AddItem-card">
-            <ClearIcon onClick={() => ShopingRemoveBtn(item.id)} className="RemoveAddItembtn" fontSize='large' />
+            <ClearIcon onClick={() => ShopingRemoveBtn(item.id)} className="RemoveAddItembtn" fontSize='medium' />
             <h3 className="AddItem-title">{item.ItemName}</h3>
             <img src={item.ItemImageUrl} alt={item.ItemName} className="AddItem-image" />
             <p className="AddItem-price">${item.Price}</p>
